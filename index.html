@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLOR_EXTRACTOR v3.0</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=JetBrains+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/img/paleta.png">
+</head>
+<body>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <nav class="cyber-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="glitch-text">COLOR_EXTRACTOR</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#tools" class="active">/TOOLS</a></li>
+                <li><a href="#palettes">/PALETTES</a></li>
+                <li><a href="#docs">/DOCS</a></li>
+                <li><button id="randomBtn" class="cyber-btn-small">GENERATE_RANDOM</button></li>
+            </ul>
+            <div class="nav-system-info">
+                <span id="os-clock">00:00:00</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bento-container">
+        
+        <main class="bento-item preview-card">
+            <div class="diamond-wrapper">
+                <div id="colorDisplay" class="color-diamond"></div>
+            </div>
+            <div class="hex-input-group">
+                <input type="text" id="hexInput" value="#FF0055" maxlength="7">
+                <button id="copyBtn">COPY_HEX</button>
+            </div>
+        </main>
+
+        <section class="bento-item controls">
+            <div class="control-group">
+                <label>CHANNEL_R <span id="valR">255</span></label>
+                <input type="range" id="red" min="0" max="255" value="255" class="slider">
+            </div>
+            <div class="control-group">
+                <label>CHANNEL_G <span id="valG">0</span></label>
+                <input type="range" id="green" min="0" max="255" value="0" class="slider">
+            </div>
+            <div class="control-group">
+                <label>CHANNEL_B <span id="valB">85</span></label>
+                <input type="range" id="blue" min="0" max="255" value="85" class="slider">
+            </div>
+        </section>
+
+        <section class="bento-item harmonies">
+            <h3>COLOR_HARMONIES</h3>
+            <div class="harmony-grid">
+                <div class="harmony-box">
+                    <span>COMPLEMENTARY</span>
+                    <div id="compColor" class="swatch clickable"></div>
+                </div>
+                <div class="harmony-box">
+                    <span>ANALOGOUS_1</span>
+                    <div id="anaColor1" class="swatch clickable"></div>
+                </div>
+                <div class="harmony-box">
+                    <span>ANALOGOUS_2</span>
+                    <div id="anaColor2" class="swatch clickable"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bento-item details">
+            <div class="tech-box">
+                <p class="clickable" id="copyRgb">RAW_RGB: <span id="rgbText">255, 0, 85</span></p>
+                <p class="clickable" id="copyHsl">HSL_MAP: <span id="hslText">340, 100, 50</span></p>
+            </div>
+        </section>
+
+        <section class="bento-item history">
+            <h3 class="glitch-low">PREVIOUS_LOGS</h3>
+            <div id="recentColors" class="recent-list"></div>
+        </section>
+
+    </div> <footer class="cyber-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <h2 class="glitch-low">COLOR_EXTRACTOR_SYS</h2>
+                <p class="status-text">> CORE_VERSION: 3.0.42</p>
+                <p class="status-text">> UPTIME: <span id="uptime-counter">00:00:00</span></p>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-column">
+                    <h4>SOCIAL</h4>
+                    <a href="https://github.com/ibraymortizmartinez" target="_blank">GITHUB</a>
+                    <a href="www.linkedin.com/in/angel-ibraym-ortiz-martínez-973360354" target="_blank">LINKEDIN</a>
+                    <a href="https://www.instagram.com/ibraym_om?igsh=N2UzdWl4b2g4dG9p" target="_blank">INSTAGRAM</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="copyright">
+                <span>© 2026 NIGHT_CITY_LABS.</span>
+                <span class="low-poly">ALL_RIGHTS_RESERVED_FOR_ANGEL IBRAYM ORTIZ MARTINEZ.</span>
+            </div>
+            <div class="system-status">
+                <span class="pulse-dot"></span>
+                SERVER_STATUS: <span class="neon-green-text">OPTIMAL</span>
+            </div>
+        </div>
+    </footer>
+    <div id="notification-container" style="position: fixed; top: 20px; right: 20px; z-index: 9999; display: flex; flex-direction: column; gap: 10px;"></div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
